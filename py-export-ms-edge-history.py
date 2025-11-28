@@ -114,7 +114,8 @@ def main():
         print('Example: py-export-ms-edge-history.exe "C:\\Users\\USERNAME\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History"')
         sys.exit(1)
     
-    dest_dir = os.path.dirname(os.path.abspath(__file__))
+    # dest_dir = os.path.dirname(os.path.abspath(__file__))
+    dest_dir = './'
     print('DEBUG:: dest_dir: ' + dest_dir)
     db_path = copy_history_file(src_history, dest_dir)
     tables = {
