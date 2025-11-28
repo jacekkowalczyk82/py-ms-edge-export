@@ -11,6 +11,7 @@ This Python script will:
 '''
 
 import os
+import sys
 import shutil
 import sqlite3
 from datetime import datetime, timedelta
@@ -111,7 +112,7 @@ def main():
         # src_history = r"C:\\Users\\USERNAME\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History"
         print('Usage: py-export-ms-edge-history.exe <path to MS edge history file>')
         print('Example: py-export-ms-edge-history.exe "C:\\Users\\USERNAME\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\History"')
-        exit(1)
+        sys.exit(1)
     
     dest_dir = os.path.dirname(os.path.abspath(__file__))
     db_path = copy_history_file(src_history, dest_dir)
