@@ -115,6 +115,7 @@ def main():
         sys.exit(1)
     
     dest_dir = os.path.dirname(os.path.abspath(__file__))
+    print('DEBUG:: dest_dir: ' + dest_dir)
     db_path = copy_history_file(src_history, dest_dir)
     tables = {
         'urls': None,
